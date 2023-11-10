@@ -3,12 +3,23 @@
 import { ref } from 'vue';
 import FormSignUp from '../components/FormSignUp.vue';
 import FormSignIn from '../components/FormSignIn.vue';
+import { useRouter } from 'vue-router';
 
-const formSignIn = ref('true')
+const formSignIn = ref(true)
+const router = useRouter()
+
+const enterChat = () => {
+  router.push({ name: 'ChatRoom' })
+}
+
 </script>
 
 <template>
-  <h1 class="text-4xl font-bold">Home</h1>
-  <FormSignUp v-if="formSignIn" @show="formSignIn = false" />
-  <FormSignIn v-else @show="formSignIn = true" />
+  <h1 class="text-4xl font-bold">Vue Live Chat</h1>
+  <div v-if="formSignIn">
+    <FormSignIn @signin="enterChat" @show="formSignIn = false" />
+  </div>
+  <div v-else>
+    <FormSignUp @signup="enterChat" @show="formSignIn = true" />
+  </div>
 </template>
