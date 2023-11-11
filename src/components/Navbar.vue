@@ -1,23 +1,31 @@
 <script setup>
 import useSignOut from '../composables/useSignOut';
+import getUser from '../composables/getUser';
 import { useRouter } from 'vue-router';
+import { watch } from 'vue';
 
+const { user } = getUser()
 const { signOut, error } = useSignOut()
 const router = useRouter()
 
 const handleClick = async () => {
   await signOut()
-  if (!error.value) {
+  // if (!error.value) {
+  //   router.push({ name: 'Home' })
+  // }
+}
+watch(user, () => {
+  if (!user.value) {
     router.push({ name: 'Home' })
   }
-}
+})
 </script>
 
 <template>
-  <nav class="flex justify-between">
+  <nav v-if="user" class="flex justify-between">
     <div>
-      <p>Hey there.. user</p>
-      <p>Currently signed in as email</p>
+      <p>Hey there {{ user.displayName }}</p>
+      <p class="text-slate-500">Currently signed in as {{ user.email }}</p>
     </div>
     <div>
       <button @click="handleClick"
