@@ -22,7 +22,7 @@ watch(user, () => {
 </script>
 
 <template>
-  <nav v-if="user" class="flex justify-between">
+  <nav v-if="user" class="flex justify-between p-6">
     <div>
       <p>Hey there {{ user.displayName }}</p>
       <p class="text-slate-500">Currently signed in as {{ user.email }}</p>
