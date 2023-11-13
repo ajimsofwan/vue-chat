@@ -15,7 +15,6 @@ const enterChat = () => {
 </script>
 
 <template>
-  <h1 class="text-4xl font-bold">Vue Live Chat</h1>
   <div v-if="formSignIn">
     <FormSignIn @signin="enterChat" @show="formSignIn = false" />
   </div>
