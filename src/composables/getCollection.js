@@ -5,11 +5,11 @@ const getCollection = (collection) => {
   const documents = ref(null);
   const error = ref(null);
 
-  let collectionRef = firestore.collection(collection).orderBy("createdAt");
+  const collectionRef = firestore.collection(collection).orderBy("createdAt");
 
   collectionRef.onSnapshot(
     (snap) => {
-      let results = [];
+      const results = [];
 
       snap.docs.forEach((doc) => {
         doc.data().createdAt && results.push({ ...doc.data(), id: doc.id });
