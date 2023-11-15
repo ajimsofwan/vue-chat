@@ -1,7 +1,17 @@
-# Vue 3 + Vite
+# Simple Live Chat App with Vite + Vue + Firebase
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+![Chatroom Screenshot](screenshot.png)
 
-## Recommended IDE Setup
+A minimalistic live chat application built with Vite, Vue, and Firebase for real-time communication.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Demo
+
+You can play the game online at [Demo Link](https://ajimsofwan.github.io/vue-chat/).
+
+## Features
+
+- Real-time chat with multiple users
+- Simple and intuitive user interface
+- Vite for fast and efficient development
+- Vue for building interactive user interfaces
+- Firebase for real-time database and authentication
