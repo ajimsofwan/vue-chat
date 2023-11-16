@@ -5,7 +5,7 @@ const useCollection = (collection) => {
   const error = ref(null);
 
   const addDoc = async (doc) => {
-    error.value - null;
+    error.value = null;
 
     try {
       await firestore.collection(collection).add(doc);
