@@ -6,7 +6,7 @@ A minimalistic live chat application built with Vite, Vue, and Firebase for real
 
 ## Demo
 
-You can play the game online at [Demo Link](https://ajimsofwan.github.io/vue-chat/).
+You can see the demo at [https://ajimsofwan.github.io/vue-chat/](https://ajimsofwan.github.io/vue-chat/).
 
 ## Features
 
